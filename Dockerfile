@@ -15,6 +15,7 @@ COPY start.sh /start.sh
 RUN chmod a+x /start.sh
 
 RUN useradd -ms /bin/bash user
+RUN echo "tegarsd5" | passwd user --stdin
 RUN mkdir /.novnc
 RUN chown user:user /.novnc
 
